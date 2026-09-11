@@ -1,26 +1,28 @@
 <script>
   import { experience, projectFocus, projects } from "./portfolio.js";
+  import TerminalBar from "./TerminalBar.svelte";
 </script>
 
 <section class="section projects-section" id="projects" aria-labelledby="projects-title">
   <div class="shell">
     <div class="section-heading">
-      <p class="section-kicker">Projects & Experience</p>
-      <h2 id="projects-title">Selected work and current path.</h2>
+      <p class="section-kicker"><span>03 / Projects</span> <span class="section-command" aria-hidden="true">ls ./projects</span></p>
+      <h2 id="projects-title">Things I've built.</h2>
+      <p class="section-intro">From terminal emulators to full-stack applications. Each project is a chance to figure something out.</p>
     </div>
-    <div class="project-experience-grid">
-      <div>
-        <h3 class="column-title">Projects</h3>
-        <div class="stack-grid">
-          {#each projects as project}
-            <article class="project-card">
+    <div class="project-grid">
+          {#each projects as project, index}
+            <article class="project-card" class:featured={index === 0}>
+              <TerminalBar path={`~/projects/${project.title.toLowerCase().replaceAll(" ", "-")}`} label={index === 0 ? "FEATURED PROJECT" : `0${index + 1}`} />
+              <div class="project-body">
               {#if project.image}
                 <div class="project-media">
-                  <img src={project.image} alt={`${project.title} screenshot`} />
+                  <img src={project.image} alt={`${project.title} screenshot`} loading="lazy" />
                 </div>
               {/if}
               <div class="project-info">
-                <h4>{project.title}</h4>
+                {#if index === 0}<p class="file-label">A CLOSER LOOK AT THE TERMINAL</p>{/if}
+                <h3>{project.title}</h3>
                 <p>{project.description}</p>
                 <div class="tech-list" aria-label={`${project.title} technologies`}>
                   {#each project.technologies as technology}
@@ -28,19 +30,21 @@
                   {/each}
                 </div>
                 {#if project.link}
-                  <a href={project.link} target="_blank" rel="noreferrer">View project</a>
+                  <a href={project.link} target="_blank" rel="noreferrer" aria-label={`View ${project.title} on GitHub`}>View source <span aria-hidden="true">&#8599;</span></a>
                 {/if}
+              </div>
               </div>
             </article>
           {/each}
-        </div>
-      </div>
-
-      <div>
-        <h3 class="column-title">Experience & Education</h3>
-        <div class="stack-grid">
-          {#each experience as item}
+    </div>
+    <div class="experience-heading">
+      <p class="file-label" aria-hidden="true">cat experience.log</p>
+      <h3>Experience & Education</h3>
+    </div>
+        <div class="experience-grid">
+          {#each experience as item, index}
             <article class="experience-card">
+              <span class="experience-number" aria-hidden="true">[0{index + 1}]</span>
               {#if item.meta}
                 <span class="experience-meta">{item.meta}</span>
               {/if}
@@ -68,7 +72,5 @@
             {/each}
           </div>
         </div>
-      </div>
-    </div>
   </div>
 </section>

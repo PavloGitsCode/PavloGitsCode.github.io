@@ -4,7 +4,8 @@
   import HeroSection from "./lib/HeroSection.svelte";
   import ProjectsSection from "./lib/ProjectsSection.svelte";
   import SkillsSection from "./lib/SkillsSection.svelte";
-  import Starfield from "./lib/Starfield.svelte";
+  import CircuitBackground from "./lib/CircuitBackground.svelte";
+  import SiteNav from "./lib/SiteNav.svelte";
 </script>
 
 <svelte:head>
@@ -15,10 +16,12 @@
   />
 </svelte:head>
 
-<Starfield />
+<CircuitBackground />
+<a class="skip-link" href="#main-content">Skip to content</a>
+<SiteNav />
 <HeroSection />
 
-<main>
+<main id="main-content">
   <AboutSection />
   <SkillsSection />
   <ProjectsSection />

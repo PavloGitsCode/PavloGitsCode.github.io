@@ -1,5 +1,6 @@
 <script>
   import { aboutItems } from "./portfolio.js";
+  import TerminalBar from "./TerminalBar.svelte";
 
   const photos = [
     { src: "/images/about-3617.webp", alt: "Pavlo sitting on a bench in the forest" },
@@ -16,6 +17,7 @@
   <div class="shell two-column-layout">
     <section class="portrait-wrap" aria-label="About photos" aria-roledescription="carousel">
       <div class="portrait-frame">
+        <TerminalBar path="~/about/life-outside-code" label="PHOTOS" />
         {#each photos as photo, index}
           <img src={photo.src} alt={photo.alt} class="portrait" hidden={index !== photoIndex} width="1200" height="1600" />
         {/each}
@@ -31,7 +33,7 @@
       </div>
     </section>
     <div class="section-copy">
-      <p class="section-kicker">About</p>
+      <p class="section-kicker"><span>01 / About</span> <span class="section-command" aria-hidden="true">cat about.md</span></p>
       <h2 id="about-title">Building an understanding of how things work</h2>
       <p>
         I am a computer science student currently building a strong foundation in electronics and embedded systems.
@@ -41,10 +43,10 @@
         I really enjoy working with all parts of technology and my main interests right now is working closer to the hardware layer.
       </p>
       <div class="stack-grid" aria-label="Core strengths">
-        {#each aboutItems as item}
+        {#each aboutItems as item, index}
           <article class="feature-card">
             <div class="card-title">
-              <img src={item.icon} alt="" class="card-icon" />
+              <span class="feature-index" aria-hidden="true">0{index + 1}</span>
               <span>{item.title}</span>
             </div>
             <p>{item.text}</p>
