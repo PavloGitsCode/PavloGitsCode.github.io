@@ -48,7 +48,7 @@ export const projects = [
     title: "Pavterm",
     description: "A small terminal emulator built to explore how terminals and pseudo-terminals work under the hood.",
     technologies: ["C", "SDL3", "CMake"],
-    image: "",
+    image: "/images/Pavterm.png",
     link: "https://github.com/PavloGitsCode/Pavterm"
   },
   {
