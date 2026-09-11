@@ -26,7 +26,6 @@
           <div><dt>minor</dt><dd>Business Data Analytics</dd></div>
           <div><dt>focus</dt><dd>Electronics &<br />embedded systems</dd></div>
         </dl>
-        <div class="profile-note"><span aria-hidden="true">#</span> Building an understanding<br />of how things work.</div>
         <div class="profile-links">
           <a href="https://github.com/PavloGitsCode" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">&#8599;</span></a>
           <a href="https://linkedin.com/in/pavlo-puzik" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">&#8599;</span></a>
