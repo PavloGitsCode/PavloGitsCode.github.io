@@ -8,7 +8,7 @@
     <div class="section-heading">
       <p class="section-kicker"><span>03 / Projects</span> <span class="section-command" aria-hidden="true">ls ./projects</span></p>
       <h2 id="projects-title">Things I've built.</h2>
-      <p class="section-intro">From terminal emulators to full-stack applications. Each project is a chance to figure something out.</p>
+      <p class="section-intro">Every project taught me something new</p>
     </div>
     <div class="project-grid">
           {#each projects as project, index}
