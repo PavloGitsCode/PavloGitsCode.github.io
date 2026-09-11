@@ -19,7 +19,7 @@ export const aboutItems = [
 export const skills = [
   {
     title: "Languages & Core",
-    items: ["Java", "Go", "C", "JavaScript"]
+    items: ["Java", "C", "JavaScript"]
   },
   {
     title: "Web / Frontend / Full-Stack",
@@ -27,7 +27,7 @@ export const skills = [
   },
   {
     title: "Databases & Data",
-    items: ["PostgreSQL", "SQLite", "SHA-256 workflows"]
+    items: ["PostgreSQL", "SQLite"]
   },
   {
     title: "Systems & Tools",
@@ -38,7 +38,7 @@ export const skills = [
     items: [
       "Embedded systems & hardware interfacing",
       "Systems design & architecture",
-      "Cybersecurity & security awareness"
+      "Electronics & Microcontrollers"
     ]
   }
 ];
@@ -58,7 +58,7 @@ export const projects = [
       "A Linux C network scanner that discovers local IPv4 devices with ARP requests and labels vendors from an OUI database.",
     technologies: ["C", "libpcap", "ARP", "OUI lookup"],
     image: "/images/NetScanDemo.png",
-    link: "https://github.com/PavloWick/NetScan"
+    link: "https://github.com/PavloGitsCode/NetScan"
   },
   {
     title: "Hex Converter",
@@ -72,7 +72,7 @@ export const projects = [
     description: "A command-line tool for checking magic bytes and SHA-256 hashes.",
     technologies: ["C", "libssl", "sqlite3"],
     image: "/images/FileChecker.png",
-    link: "https://github.com/PavloWick/Filechecker"
+    link: "https://github.com/PavloGitsCode/Filechecker"
   }
 ];
 
@@ -128,7 +128,7 @@ export const socials = [
     icon: "/images/icons/in.png"
   },
   {
-    href: "https://github.com/PavloWick",
+    href: "https://github.com/PavloGitsCode",
     label: "GitHub profile",
     icon: "/images/icons/git.png"
   },

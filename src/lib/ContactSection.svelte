@@ -12,7 +12,7 @@
       <a href="https://linkedin.com/in/pavlo-puzik" target="_blank" rel="noreferrer" class="primary-action">
         LinkedIn
       </a>
-      <a href="https://github.com/PavloWick" target="_blank" rel="noreferrer" class="secondary-action">
+      <a href="https://github.com/PavloGitsCode" target="_blank" rel="noreferrer" class="secondary-action">
         GitHub
       </a>
     </div>

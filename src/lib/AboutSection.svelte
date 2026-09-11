@@ -11,7 +11,7 @@
       <p class="section-kicker">About</p>
       <h2 id="about-title">Building practical systems with care.</h2>
       <p>
-        I am a computer science student currently building a strong foundation in Networking & Embedded Systems.
+        I am a computer science student currently building a strong foundation in electronics and embedded systems.
         I am also pursuing a minor in Business Data Analytics.
       </p>
       <p>
