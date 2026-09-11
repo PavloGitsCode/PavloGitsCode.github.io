@@ -1,13 +1,13 @@
 export const aboutItems = [
   {
     icon: "/images/icons/code.png",
-    title: "Clean Code",
-    text: "Writing maintainable, readable, and scalable code that is easier to extend over time."
+    title: "Code I Can Come Back To",
+    text: "I try to write code I can revisit later and still understand."
   },
   {
     icon: "/images/icons/innovation.png",
-    title: "Innovation",
-    text: "Exploring practical ways to solve technical problems with thoughtful, creative solutions."
+    title: "Learning by Building",
+    text: "When I'm curious about how something works, I like trying to build a small version myself."
   },
   {
     icon: "/images/icons/systems.png",
@@ -44,6 +44,13 @@ export const skills = [
 ];
 
 export const projects = [
+  {
+    title: "Pavterm",
+    description: "A small terminal emulator built to explore how terminals and pseudo-terminals work under the hood.",
+    technologies: ["C", "SDL3", "CMake"],
+    image: "",
+    link: "https://github.com/PavloGitsCode/Pavterm"
+  },
   {
     title: "GigFlow",
     description:

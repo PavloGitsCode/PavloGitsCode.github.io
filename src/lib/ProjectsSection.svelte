@@ -14,9 +14,11 @@
         <div class="stack-grid">
           {#each projects as project}
             <article class="project-card">
-              <div class="project-media">
-                <img src={project.image} alt={`${project.title} screenshot`} />
-              </div>
+              {#if project.image}
+                <div class="project-media">
+                  <img src={project.image} alt={`${project.title} screenshot`} />
+                </div>
+              {/if}
               <div class="project-info">
                 <h4>{project.title}</h4>
                 <p>{project.description}</p>

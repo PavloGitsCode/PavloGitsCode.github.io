@@ -1,22 +1,44 @@
 <script>
   import { aboutItems } from "./portfolio.js";
+
+  const photos = [
+    { src: "/images/about-3617.webp", alt: "Pavlo sitting on a bench in the forest" },
+    { src: "/images/about-6041.webp", alt: "Pavlo beside a mountain river and wooden footbridge" }
+  ];
+  let photoIndex = $state(0);
+
+  function changePhoto(direction) {
+    photoIndex = (photoIndex + direction + photos.length) % photos.length;
+  }
 </script>
 
 <section class="section about-section" id="about" aria-labelledby="about-title">
   <div class="shell two-column-layout">
-    <div class="portrait-wrap">
-      <img src="/images/ZooLights.jpg" alt="Portrait of Pavlo Puzik" class="portrait" />
-    </div>
+    <section class="portrait-wrap" aria-label="About photos" aria-roledescription="carousel">
+      <div class="portrait-frame">
+        {#each photos as photo, index}
+          <img src={photo.src} alt={photo.alt} class="portrait" hidden={index !== photoIndex} width="1200" height="1600" />
+        {/each}
+      </div>
+      <div class="portrait-controls">
+        <button type="button" onclick={() => changePhoto(-1)} aria-label="Previous photo">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6" /></svg>
+        </button>
+        <span aria-live="polite" aria-atomic="true">Photo {photoIndex + 1} of {photos.length}</span>
+        <button type="button" onclick={() => changePhoto(1)} aria-label="Next photo">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 6 6 6-6 6" /></svg>
+        </button>
+      </div>
+    </section>
     <div class="section-copy">
       <p class="section-kicker">About</p>
-      <h2 id="about-title">Building practical systems with care.</h2>
+      <h2 id="about-title">Building an understanding of how things work</h2>
       <p>
         I am a computer science student currently building a strong foundation in electronics and embedded systems.
         I am also pursuing a minor in Business Data Analytics.
       </p>
       <p>
-        I have strong interests in cybersecurity and motorsport engineering, which is why I
-        enjoy systems design, problem solving, and data-driven thinking.
+        I really enjoy working with all parts of technology and my main interests right now is working closer to the hardware layer.
       </p>
       <div class="stack-grid" aria-label="Core strengths">
         {#each aboutItems as item}

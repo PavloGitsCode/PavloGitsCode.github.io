@@ -297,16 +297,68 @@ main,
 
 .portrait-wrap {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.portrait-frame {
+  width: min(100%, 420px);
 }
 
 .portrait {
-  width: min(100%, 420px);
-  aspect-ratio: 4 / 5;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   object-fit: cover;
   box-shadow: var(--shadow);
+}
+
+.portrait[hidden] {
+  display: none;
+}
+
+.portrait-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.portrait-controls button {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--panel);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.portrait-controls button:hover,
+.portrait-controls button:focus-visible {
+  border-color: var(--blue);
+  color: var(--blue);
+}
+
+.portrait-controls button:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
+}
+
+.portrait-controls svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
 }
 
 .section-heading {
